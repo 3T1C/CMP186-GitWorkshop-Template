@@ -21,12 +21,13 @@ namespace SalaryCalculator
             }
             else if (employeeType == EmployeeType.SeniorEngineer || employeeType == EmployeeType.Manager)
             {
-                factor = 1.5m;
+                factor = 2m;
             }
-            if (employeeType == EmployeeType.Expert)
+            else if (employeeType == EmployeeType.SeniorManager)
             {
                 factor = 3;
             }
+            if (employee)
             // TODO: if employee is Expert, set factor = 3
 
             var salary = BASIC_SALARY * years * factor;
